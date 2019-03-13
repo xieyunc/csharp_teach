@@ -8,62 +8,39 @@ namespace Demo_DataType
 {
     class Program
     {
-        public enum Mrkj
-        {
-            Csharp,Cpp=6,Jave
-        }
         static void Main(string[] args)
         {
-            float f = 10.34f;
-            double d = 10.34;
 
-            int i = 10;
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(byte).Name, sizeof(byte), byte.MinValue, byte.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(sbyte).Name, sizeof(sbyte), sbyte.MinValue, sbyte.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(short).Name, sizeof(short), short.MinValue, short.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(ushort).Name, sizeof(ushort), ushort.MinValue, ushort.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(int).Name, sizeof(int), int.MinValue, int.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(uint).Name, sizeof(uint), uint.MinValue, uint.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(long).Name, sizeof(long), long.MinValue, long.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(ulong).Name, sizeof(ulong), ulong.MinValue, ulong.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(float).Name, sizeof(float), float.MinValue, float.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(double).Name, sizeof(double), double.MinValue, double.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}", 
+                                typeof(decimal).Name, sizeof(decimal), decimal.MinValue, decimal.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t", 
+                                typeof(bool).Name, sizeof(bool));
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t 取值范围：{2} ~ {3}",
+                                typeof(char).Name, sizeof(char), char.MinValue, char.MaxValue);
+            Console.WriteLine("{0}:\t 所占字节数: {1}\t ",
+                                typeof(IntPtr).Name, IntPtr.Size);
 
-            d = i;//隐形数据类型转换
-
-            i = (int)d;//强制类型转换方法一
-            i = Convert.ToInt32(d);//强制类型转换方法二
-            i = int.Parse(d.ToString());//强制类型转换方法三
-
-            Student stu1 = new Student();
-            Student stu2;
-
-            stu2 = stu1;
-            stu1.Sex = Student.SEX.女;
-
-            System.Console.WriteLine("student.name={0}",stu1._name);
-            stu2._name = "小宇飞刀";
-            System.Console.WriteLine("student.Sex={0}", stu1.Sex);
-
-            System.Console.WriteLine("Csharp={0},Cpp={1},Jave={2}",(int)Mrkj.Csharp,(int)Mrkj.Cpp,(int)Mrkj.Jave);
-
-            System.Console.WriteLine("f="+f);
-            System.Console.WriteLine("short类型的类型名为：{0},占用字节数{1},最小值为{2},最大值为{3}", typeof(short), sizeof(short), short.MinValue, short.MaxValue);
-            System.Console.WriteLine("long类型的类型名为：{0},占用字节数{1},最小值为{2},最大值为{3}", typeof(long), sizeof(long), long.MinValue, long.MaxValue);
-            System.Console.WriteLine("double类型的类型名为：{0},占用字节数{1},最小值为{2},最大值为{3}", typeof(double), sizeof(double), double.MinValue, double.MaxValue);
-
-            System.Console.ReadKey();
+            Console.ReadKey();
         }
-    }
-    class Student
-    {
-        public enum SEX
-        {
-            男, 女
-        }
-        public string _name = "xieyunc";  //9
-        private SEX _sex=SEX.男;//私有成员变量
-        public SEX Sex//公共成员变量，类的属性
-        {
-            get { return _sex; }
-            set { _sex = value; }
-        }
-        private DateTime _Birth;//8
-
-        public Student()
-        {
-            Sex = SEX.男;
-        }
-
     }
 }
