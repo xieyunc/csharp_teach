@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9C88652-986E-40BC-A0BF-8C5A6624667C}</ProjectGuid>
+    <ProjectGuid>{99459C08-B694-4C53-B9F5-5F828A3CA903}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo_enum</RootNamespace>
-    <AssemblyName>Demo_enum</AssemblyName>
+    <RootNamespace>Demo_Enum</RootNamespace>
+    <AssemblyName>Demo_Enum</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
