@@ -10,38 +10,19 @@ namespace Demo_Split
     {
         static void Main(string[] args)
         {
-            string str= "好人|坏人|圣人|AA";
-            string[] strs = str.Split('|');
-            Console.WriteLine("str = {0}",str);
-            Console.WriteLine("strs[0]={0}",strs[0]);
-            Console.WriteLine("strs[1]={0}", strs[1]);
-            Console.WriteLine("strs[2]={0}", strs[2]);
-            Console.WriteLine("strs[3]={0}", strs[3]);
+            string str = "男人，女人，好人，坏人，圣人，";
+            int[] x = {1,2,3};
+            for (int i = 0; i < x.Length; i++)
+                Console.WriteLine(x[i]);
 
+            string[] sList = str.Split('，');
 
-            str = "小宇飞刀";
-            //str = "【" + str + "】";
-            Console.WriteLine(str.Length);
-            string str1 = str.PadLeft(5,'【');
-            string str2 = str1.PadRight(6,'】');
-            Console.WriteLine("str2={0}",str2);
-            str = str.Remove(2, 2);
-            Console.WriteLine("str={0}", str);
-            str2 = string.Copy(str);
-            str = "abcdefg";
-            char[] ss= {'k','k','k','k','k'};
-            Console.WriteLine("ss={0}",ss[0]);//kkkkk
-            str.CopyTo(1, ss, 0, 3);
-            Console.WriteLine("ss={0}", ss[0]);//bcdkk
-
-            Console.WriteLine("str={0}", str);
-            str = str.Replace('a', 'A');
-            Console.WriteLine("str={0}",str);
-
-            str = str.Replace("de","DE");
-            Console.WriteLine("str={0}", str);
+            for (int i = 0; i < sList.Length; i++)
+                Console.WriteLine(sList[i].Replace("人",""));
+            
 
             Console.ReadKey();
+
         }
     }
 }

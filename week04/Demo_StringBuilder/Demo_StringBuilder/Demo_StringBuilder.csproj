@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BF7871C-1140-4719-AEF0-A4348920A74A}</ProjectGuid>
+    <ProjectGuid>{80A65B9A-4555-422F-842F-BD7D86159D66}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo_Substring</RootNamespace>
-    <AssemblyName>Demo_Substring</AssemblyName>
+    <RootNamespace>Demo_StringBuilder</RootNamespace>
+    <AssemblyName>Demo_StringBuilder</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

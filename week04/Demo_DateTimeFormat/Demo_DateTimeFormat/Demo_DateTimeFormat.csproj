@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{642810E0-7CAE-4582-8B52-98C270BBE3FD}</ProjectGuid>
+    <ProjectGuid>{FEB4908D-62B9-4F0D-9748-069EE8D44AF5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Demo_DateTimeFormat</RootNamespace>

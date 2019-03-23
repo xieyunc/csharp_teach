@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_Substring", "Demo_Substring\Demo_Substring.csproj", "{4BF7871C-1140-4719-AEF0-A4348920A74A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_StringCompare", "Demo_StringCompare\Demo_StringCompare.csproj", "{59E0DA4F-DEBC-4A58-99F4-5E81E2398969}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BF7871C-1140-4719-AEF0-A4348920A74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BF7871C-1140-4719-AEF0-A4348920A74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BF7871C-1140-4719-AEF0-A4348920A74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BF7871C-1140-4719-AEF0-A4348920A74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E0DA4F-DEBC-4A58-99F4-5E81E2398969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E0DA4F-DEBC-4A58-99F4-5E81E2398969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E0DA4F-DEBC-4A58-99F4-5E81E2398969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E0DA4F-DEBC-4A58-99F4-5E81E2398969}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

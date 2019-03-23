@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Demo_Substring")]
+[assembly: AssemblyTitle("Demo_StringBuilder")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Demo_Substring")]
+[assembly: AssemblyProduct("Demo_StringBuilder")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("34b54abe-6135-4681-a95b-8a927a05ab53")]
+[assembly: Guid("7f6fee0c-8921-41a1-aa48-8f0f9e32b346")]
 
 // 程序集的版本信息由下面四个值组成: 
 //
