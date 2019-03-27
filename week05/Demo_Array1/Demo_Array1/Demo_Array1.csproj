@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A41E3B9A-EA91-49CE-88D3-35535D463844}</ProjectGuid>
+    <ProjectGuid>{088FB1AF-E28F-44D3-8D9D-F53E89753D50}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo_Swithch</RootNamespace>
-    <AssemblyName>Demo_Swithch</AssemblyName>
+    <RootNamespace>Demo_Array1</RootNamespace>
+    <AssemblyName>Demo_Array1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
