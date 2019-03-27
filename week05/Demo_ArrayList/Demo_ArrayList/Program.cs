@@ -22,19 +22,41 @@ namespace Demo_ArrayList
             }
             Console.WriteLine();
 
-            List.Add(66);
-            List.Insert(3, 44);
-            List.Remove(5);
-            List.RemoveAt(3);
-
-            List.RemoveRange(5, 2);
-
             Console.WriteLine("List的原始值：");
             foreach (int x in List)
             {
                 Console.Write(x+" ");
             }
+            Console.WriteLine();
+			
+            List.Add(66);
+            List.Insert(3, 44);
+            Console.WriteLine("List的新增和插入数据后：");
+            foreach (int x in List)
+            {
+                Console.Write(x+" ");
+            }
+            Console.WriteLine();
+			
+            List.Remove(5);
+            List.RemoveAt(3);
 
+            Console.WriteLine("List的删除2个数据后：");
+            foreach (int x in List)
+            {
+                Console.Write(x+" ");
+            }
+
+            Console.WriteLine();
+
+            List.RemoveRange(3, 2);
+            Console.WriteLine("List的删除一段数据：");
+            foreach (int x in List)
+            {
+                Console.Write(x+" ");
+            }
+
+			
             Console.WriteLine();
             List.Sort();
             Console.WriteLine("List排序之后的值：");
@@ -42,8 +64,6 @@ namespace Demo_ArrayList
             {
                 Console.Write(x + " ");
             }
-
-
 
             Console.ReadKey();
 
