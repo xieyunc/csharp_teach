@@ -49,16 +49,16 @@ namespace Demo_LoginForm
 
         private void txt_UserPwd_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //MessageBox.Show(e.KeyChar.ToString());
-            if (e.KeyChar == 13) //回车键
-                btn_Login_Click(btn_Login, e);
-            else if (e.KeyChar == 27) //ESC键
-                btn_Cancel_Click(sender, e);
+
         }
 
         private void txt_UserPwd_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            //此事件与KeyPress事件只需其一即可，不可两者均写
+            if (e.KeyCode == Keys.Enter) //回车键
+                btn_Login_Click(sender, e);
+            else if (e.KeyCode == Keys.Cancel) //ESC键
+                btn_Cancel_Click(sender, e);
         }
     }
 }

@@ -64,7 +64,6 @@
             this.txt_UserPwd.TabIndex = 3;
             this.txt_UserPwd.TextChanged += new System.EventHandler(this.txt_UserName_TextChanged);
             this.txt_UserPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_UserPwd_KeyDown);
-            this.txt_UserPwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_UserPwd_KeyPress);
             // 
             // label2
             // 
@@ -88,6 +87,7 @@
             // 
             // btn_Cancel
             // 
+            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancel.Location = new System.Drawing.Point(271, 178);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
@@ -98,8 +98,10 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.btn_Login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_Cancel;
             this.ClientSize = new System.Drawing.Size(453, 262);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Login);
