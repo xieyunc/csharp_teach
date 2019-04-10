@@ -130,6 +130,7 @@
             this.Controls.Add(this.lbl_Msg);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "加法运算小程序";
             this.ResumeLayout(false);
             this.PerformLayout();
