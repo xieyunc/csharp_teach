@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8FA29185-0C90-4C83-A146-39AD5C236EA5}</ProjectGuid>
+    <ProjectGuid>{C5D8DE88-F608-4ABF-8760-78B497E4E902}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo_Color</RootNamespace>
-    <AssemblyName>Demo_Color</AssemblyName>
+    <RootNamespace>Demol_HelloWorld_PositionInCenter</RootNamespace>
+    <AssemblyName>Demol_HelloWorld_PositionInCenter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

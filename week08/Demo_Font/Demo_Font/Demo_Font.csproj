@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5BCD3914-296D-47C7-8408-9A2134EED745}</ProjectGuid>
+    <ProjectGuid>{A044989D-2E04-4705-A428-D01600ECCDE6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Demo_Font</RootNamespace>

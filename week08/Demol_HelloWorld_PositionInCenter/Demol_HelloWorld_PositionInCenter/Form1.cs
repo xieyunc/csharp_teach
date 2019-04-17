@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Demo_Color
+namespace Demol_HelloWorld_PositionInCenter
 {
     public partial class Form1 : Form
     {
@@ -19,14 +19,10 @@ namespace Demo_Color
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.BackColor = System.Drawing.Color.Red;
-            label1.BackColor = System.Drawing.Color.FromArgb(255, 0, 0);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            label1.ForeColor = System.Drawing.Color.Green;
-            label1.ForeColor = System.Drawing.Color.FromArgb(0,255,0);
+            int ww = this.Width;
+            int w1 = label1.Width;
+            int X = (ww - w1) / 2;
+            label1.Location = new Point(X, label1.Location.Y);
         }
     }
 }
