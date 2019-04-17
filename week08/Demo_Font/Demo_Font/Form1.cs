@@ -21,7 +21,7 @@ namespace Demo_Font
         {
             string fontName = textBox2.Text;
             float fontSize = Convert.ToSingle(textBox1.Text);
-            label1.Font = new Font(textBox2.Text, fontSize);
+            label1.Font = new Font(textBox2.Text, fontSize,label1.Font.Style);
         }
 
         private void button2_Click(object sender, EventArgs e)
