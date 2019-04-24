@@ -231,7 +231,7 @@
             this.mi_AutoLine.Checked = true;
             this.mi_AutoLine.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mi_AutoLine.Name = "mi_AutoLine";
-            this.mi_AutoLine.Size = new System.Drawing.Size(152, 22);
+            this.mi_AutoLine.Size = new System.Drawing.Size(144, 22);
             this.mi_AutoLine.Text = "自动换行(&W)";
             this.mi_AutoLine.Click += new System.EventHandler(this.mi_AutoLine_Click);
             // 
@@ -255,7 +255,7 @@
             this.mi_StatusStrip.Checked = true;
             this.mi_StatusStrip.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mi_StatusStrip.Name = "mi_StatusStrip";
-            this.mi_StatusStrip.Size = new System.Drawing.Size(152, 22);
+            this.mi_StatusStrip.Size = new System.Drawing.Size(127, 22);
             this.mi_StatusStrip.Text = "状态栏(&S)";
             this.mi_StatusStrip.Click += new System.EventHandler(this.mi_StatusStrip_Click);
             // 
@@ -317,6 +317,9 @@
             // statusBar_Row
             // 
             this.statusBar_Row.AutoSize = false;
+            this.statusBar_Row.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusBar_Row.BorderStyle = System.Windows.Forms.Border3DStyle.Adjust;
             this.statusBar_Row.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.statusBar_Row.Name = "statusBar_Row";
