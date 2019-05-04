@@ -68,6 +68,7 @@
             this.mi_Copy = new System.Windows.Forms.ToolStripMenuItem();
             this.mi_Cut = new System.Windows.Forms.ToolStripMenuItem();
             this.mi_Paste = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusBar_Encode = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -300,7 +301,8 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.statusBar_Row,
-            this.statusBar_Col});
+            this.statusBar_Col,
+            this.statusBar_Encode});
             this.statusStrip1.Location = new System.Drawing.Point(0, 421);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(788, 22);
@@ -311,7 +313,7 @@
             // 
             this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(613, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(502, 17);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // statusBar_Row
@@ -383,6 +385,12 @@
             this.mi_Paste.Size = new System.Drawing.Size(161, 22);
             this.mi_Paste.Text = "粘贴(&V)";
             // 
+            // statusBar_Encode
+            // 
+            this.statusBar_Encode.Name = "statusBar_Encode";
+            this.statusBar_Encode.Size = new System.Drawing.Size(56, 17);
+            this.statusBar_Encode.Text = "编码格式";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -394,6 +402,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "小宇记事本";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -445,6 +454,7 @@
         private System.Windows.Forms.ToolStripMenuItem mi_Copy;
         private System.Windows.Forms.ToolStripMenuItem mi_Cut;
         private System.Windows.Forms.ToolStripMenuItem mi_Paste;
+        private System.Windows.Forms.ToolStripStatusLabel statusBar_Encode;
     }
 }
 

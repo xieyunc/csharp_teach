@@ -14,11 +14,12 @@ namespace Demo_Menu
     public partial class Form1 : Form
     {
         private string _FileName = "";//文件名
+        private Encoding _FileEncode = Encoding.UTF8;//系统默认编码为ANSI：Encoding.Default
         private bool _IsSaved = true;//是否已保存
 
         private void SaveTextFile(string fileName)
         {
-            StreamWriter sw = new StreamWriter(fileName);
+            StreamWriter sw = new StreamWriter(fileName,false,_FileEncode);
             sw.WriteLine(textBox1.Text);
             sw.Flush();//文件流
             sw.Close();//最后要关闭写入状态
@@ -60,8 +61,10 @@ namespace Demo_Menu
                 else if (dResult == DialogResult.No)
                 {
                     _FileName = "";
+                    _FileEncode = Encoding.UTF8;
                     _IsSaved = true;
                     textBox1.Clear();
+                    statusBar_Encode.Text = _FileEncode.EncodingName;
                     this.Text = "新建文本文档";
                     textBox1.Focus();
                 }
@@ -69,8 +72,10 @@ namespace Demo_Menu
             else
             {
                 _FileName = "";
+                _FileEncode = Encoding.UTF8;
                 _IsSaved = true;
                 textBox1.Clear();
+                statusBar_Encode.Text = _FileEncode.EncodingName;
                 this.Text = "新建文本文档";
                 textBox1.Focus();
             }
@@ -89,12 +94,14 @@ namespace Demo_Menu
         {
             if (openFileDialog1.ShowDialog()==DialogResult.OK)
             {
-                System.IO.StreamReader sr;
-                sr = new System.IO.StreamReader(openFileDialog1.FileName,Encoding.UTF8);
-                textBox1.Text = sr.ReadToEnd();
-                sr.Close();
                 _FileName = openFileDialog1.FileName;
                 this.Text = _FileName;
+                _FileEncode = TextEncodingType.GetType(_FileName);//自动获取文件的编码类型
+                System.IO.StreamReader sr;
+                sr = new System.IO.StreamReader(_FileName, _FileEncode);//加入了自动判断文件编码类型的功能
+                textBox1.Text = sr.ReadToEnd();
+                sr.Close();
+                statusBar_Encode.Text = _FileEncode.EncodingName;
                 _IsSaved = true;
             }
         }
@@ -247,7 +254,12 @@ namespace Demo_Menu
         private void mi_About_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("小宇记事本--一个用C#编写的记事小工具！Powered by 小宇飞刀\n\t\t2019-04-23 江西南昌","系统提示",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            (new AboutBox()).ShowDialog();
+            (new AboutForm()).ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            statusBar_Encode.Text = _FileEncode.EncodingName;
         }
     }
 }
