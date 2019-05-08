@@ -225,7 +225,7 @@ namespace Demo_Menu
             mi_Edit_Undo.Enabled = textBox1.CanUndo;
 
             mi_Edit_Copy.Enabled = textBox1.SelectionLength > 0;
-            mi_Edit_Cut.Enabled = mi_Copy.Enabled;
+            mi_Edit_Cut.Enabled = mi_Edit_Copy.Enabled;
 
             mi_Copy.Enabled = textBox1.SelectionLength > 0;
             mi_Cut.Enabled = mi_Copy.Enabled;
