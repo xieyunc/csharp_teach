@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Demo_Menu
+namespace Demo_NotePad
 {
     public partial class AboutForm : Form
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Demo_Menu
+namespace Demo_NotePad
 {
     public static class TextEncodingType
     {

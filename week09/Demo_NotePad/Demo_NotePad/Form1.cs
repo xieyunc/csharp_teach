@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace Demo_Menu
+namespace Demo_NotePad
 {
     public partial class Form1 : Form
     {
@@ -96,9 +96,10 @@ namespace Demo_Menu
             {
                 _FileName = openFileDialog1.FileName;
                 this.Text = _FileName;
-                _FileEncode = TextEncodingType.GetType(_FileName);//自动获取文件的编码类型
+                _FileEncode = TextEncodingType.GetType(_FileName);//调用自定义静态类，自动获取文件的编码类型
                 System.IO.StreamReader sr;
                 sr = new System.IO.StreamReader(_FileName, _FileEncode);//加入了自动判断文件编码类型的功能
+                //sr = new System.IO.StreamReader(_FileName);
                 textBox1.Text = sr.ReadToEnd();
                 sr.Close();
                 statusBar_Encode.Text = _FileEncode.EncodingName;
@@ -184,11 +185,6 @@ namespace Demo_Menu
 
         private void textBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
-            {
-                contextMenuStrip1.Show(textBox1, new Point(e.X, e.Y));
-            }
-
             DisplayRowColInfo();
         }
 
@@ -212,26 +208,17 @@ namespace Demo_Menu
 
         private void mi_Edit_Cancel_Click(object sender, EventArgs e)
         {
-            //if (textBox1.CanUndo)
+            if (textBox1.CanUndo)
                 textBox1.Undo();
-        }
-
-        private void contextMenuStrip1_MouseUp(object sender, MouseEventArgs e)
-        {
         }
 
         private void mi_Edit_DropDownOpened(object sender, EventArgs e)
         {
             mi_Edit_Undo.Enabled = textBox1.CanUndo;
 
-            mi_Edit_Copy.Enabled = textBox1.SelectionLength > 0;
+            mi_Edit_Copy.Enabled = textBox1.SelectedText != "";// textBox1.SelectionLength > 0; //判断是否选中了文本信息
             mi_Edit_Cut.Enabled = mi_Edit_Copy.Enabled;
-
-            mi_Copy.Enabled = textBox1.SelectionLength > 0;
-            mi_Cut.Enabled = mi_Copy.Enabled;
-
-            mi_Paste.Enabled = Clipboard.ContainsText();
-            mi_Edit_Paste.Enabled = mi_Paste.Enabled;
+            mi_Edit_Paste.Enabled = Clipboard.ContainsText();//判断剪切板中最后一次复制或剪切的内容是否是文本信息
         }
 
         private void contextMenuStrip1_Opened(object sender, EventArgs e)
@@ -254,7 +241,9 @@ namespace Demo_Menu
         private void mi_About_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("小宇记事本--一个用C#编写的记事小工具！Powered by 小宇飞刀\n\t\t2019-04-23 江西南昌","系统提示",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            (new AboutForm()).ShowDialog();
+            AboutForm aForm = new AboutForm();
+            aForm.ShowDialog();
+            //(new AboutForm()).ShowDialog();//上面两条语句可简化为此一条语句
         }
 
         private void Form1_Load(object sender, EventArgs e)

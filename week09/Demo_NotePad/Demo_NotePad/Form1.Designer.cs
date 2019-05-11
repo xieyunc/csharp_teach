@@ -1,4 +1,4 @@
-﻿namespace Demo_Menu
+﻿namespace Demo_NotePad
 {
     partial class Form1
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mi_File = new System.Windows.Forms.ToolStripMenuItem();
             this.mi_NewFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,14 +63,9 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mi_Copy = new System.Windows.Forms.ToolStripMenuItem();
-            this.mi_Cut = new System.Windows.Forms.ToolStripMenuItem();
-            this.mi_Paste = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBar_Encode = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -313,7 +307,7 @@
             // 
             this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(502, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(557, 17);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // statusBar_Row
@@ -353,43 +347,11 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mi_Copy,
-            this.mi_Cut,
-            this.mi_Paste});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(162, 70);
-            this.contextMenuStrip1.Opened += new System.EventHandler(this.contextMenuStrip1_Opened);
-            this.contextMenuStrip1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.contextMenuStrip1_MouseUp);
-            // 
-            // mi_Copy
-            // 
-            this.mi_Copy.Name = "mi_Copy";
-            this.mi_Copy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.mi_Copy.Size = new System.Drawing.Size(161, 22);
-            this.mi_Copy.Text = "复制(&C)";
-            // 
-            // mi_Cut
-            // 
-            this.mi_Cut.Name = "mi_Cut";
-            this.mi_Cut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.mi_Cut.Size = new System.Drawing.Size(161, 22);
-            this.mi_Cut.Text = "剪切(&X)";
-            // 
-            // mi_Paste
-            // 
-            this.mi_Paste.Name = "mi_Paste";
-            this.mi_Paste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.mi_Paste.Size = new System.Drawing.Size(161, 22);
-            this.mi_Paste.Text = "粘贴(&V)";
-            // 
             // statusBar_Encode
             // 
             this.statusBar_Encode.Name = "statusBar_Encode";
             this.statusBar_Encode.Size = new System.Drawing.Size(56, 17);
-            this.statusBar_Encode.Text = "编码格式";
+            this.statusBar_Encode.Text = "文件编码";
             // 
             // Form1
             // 
@@ -407,7 +369,6 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,10 +411,6 @@
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.ToolStripStatusLabel statusBar_Col;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mi_Copy;
-        private System.Windows.Forms.ToolStripMenuItem mi_Cut;
-        private System.Windows.Forms.ToolStripMenuItem mi_Paste;
         private System.Windows.Forms.ToolStripStatusLabel statusBar_Encode;
     }
 }
