@@ -25,19 +25,17 @@ namespace Demo_Timer
                 label1.Left = label1.Left - 5;
         }
 
-        private void 开启移动广告文字ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void mi_Start_Click(object sender, EventArgs e)
         {
             timer1.Interval = 200;//每隔0.2秒钟去执行一次timer1_Tick()事件函数中的内容。
             timer1.Enabled = true;//启用控件
+            splitContainer1.Panel2Collapsed = false;//显示底部的panel2控件。
         }
 
         private void mi_Stop_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;//停用控件
+            splitContainer1.Panel2Collapsed = true;//隐藏底部的panel2控件。
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
