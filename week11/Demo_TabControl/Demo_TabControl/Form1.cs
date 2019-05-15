@@ -45,16 +45,24 @@ namespace Demo_TabControl
             aPage.BackColor = Color.Red;
 
             tabControl1.TabPages.Insert(iCurrPageIndex, aPage);
+            if (iCurrPageIndex < tabControl1.TabCount)
+                tabControl1.SelectedIndex = iCurrPageIndex; //删除了当前页后，后面是否还有多余的页替换当前索引页
+            else
+                tabControl1.SelectedIndex = tabControl1.TabCount - 1;
             tabControl1.SelectedTab = aPage;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex!=-1)
+            int iCurrPageIndex = tabControl1.SelectedIndex;
+            if (iCurrPageIndex != -1)
             {
                 tabControl1.TabPages.RemoveAt(tabControl1.SelectedIndex);//通过索引号来删除页
+                if (iCurrPageIndex < tabControl1.TabCount)
+                    tabControl1.SelectedIndex = iCurrPageIndex; //删除了当前页后，后面是否还有多余的页替换当前索引页
+                else
+                    tabControl1.SelectedIndex = tabControl1.TabCount - 1;
             }
-
         }
 
         private void button4_Click(object sender, EventArgs e)

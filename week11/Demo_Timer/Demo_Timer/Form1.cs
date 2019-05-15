@@ -19,42 +19,40 @@ namespace Demo_Timer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (label1.Left < -label1.Width) //广告标签完全移出了左边
+            if (label1.Left<-label1.Width)
+            {
                 label1.Left = this.Width;
+            }
             else
-                label1.Left = label1.Left - 5;
+            {
+                label1.Left = label1.Left - 3;
+            }
         }
 
         private void mi_Start_Click(object sender, EventArgs e)
         {
-            timer1.Interval = 200;//每隔0.2秒钟去执行一次timer1_Tick()事件函数中的内容。
-            timer1.Enabled = true;//启用控件
-            splitContainer1.Panel2Collapsed = false;//显示底部的panel2控件。
+            timer1.Enabled = true;
+            splitContainer1.Panel2Collapsed = false;
         }
 
         private void mi_Stop_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = false;//停用控件
-            splitContainer1.Panel2Collapsed = true;//隐藏底部的panel2控件。
+            timer1.Enabled = false;
+            splitContainer1.Panel2Collapsed = true;
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                contextMenuStrip1.Show(MousePosition.X, MousePosition.Y);
+                contextMenuStrip1.Show(MousePosition.X,MousePosition.Y);
             }
         }
 
         private void contextMenuStrip1_Opened(object sender, EventArgs e)
         {
             mi_Start.Enabled = !timer1.Enabled;
-            mi_Stop.Enabled = timer1.Enabled;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            mi_Stop.Enabled = !mi_Start.Enabled;
         }
     }
 }
