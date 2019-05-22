@@ -19,7 +19,7 @@ namespace Demo_MonthCalendar
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            textBox1.Text = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
+            textBox1.Text = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");//返回月历的今天的日期
             textBox2.Text = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
             textBox3.Text = monthCalendar1.SelectionEnd.ToString("yyyy-MM-dd");
         }

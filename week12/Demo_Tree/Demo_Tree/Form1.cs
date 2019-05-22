@@ -19,17 +19,17 @@ namespace Demo_Tree
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            textBox1.Text = treeView1.SelectedNode.Text;
+            textBox1.Text = treeView1.SelectedNode.Text+"("+treeView1.SelectedNode.Level.ToString()+")";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            treeView1.ExpandAll();
+            treeView1.ExpandAll();//展开节点
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            treeView1.CollapseAll();
+            treeView1.CollapseAll();//收缩节点
         }
 
         private void button1_Click(object sender, EventArgs e)

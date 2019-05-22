@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC59948C-6FE2-4E18-972A-43C50AD4E837}</ProjectGuid>
+    <ProjectGuid>{749A8029-FEF4-460D-BB9D-AB593D0F7CD9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo_DateTime</RootNamespace>
-    <AssemblyName>Demo_DateTime</AssemblyName>
+    <RootNamespace>Demo_DateTimePicker</RootNamespace>
+    <AssemblyName>Demo_DateTimePicker</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

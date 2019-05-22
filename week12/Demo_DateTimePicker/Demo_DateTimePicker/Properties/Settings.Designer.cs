@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demo_DateTime.Properties
+namespace Demo_DateTimePicker.Properties
 {
 
 

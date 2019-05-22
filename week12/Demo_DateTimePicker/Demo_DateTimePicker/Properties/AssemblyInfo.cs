@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Demo_DateTime")]
+[assembly: AssemblyTitle("Demo_DateTimePicker")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Demo_DateTime")]
+[assembly: AssemblyProduct("Demo_DateTimePicker")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("910977d8-186f-4816-9039-779f6648b0ca")]
+[assembly: Guid("f83140fc-5518-4664-9ffc-c4abda4614db")]
 
 // 程序集的版本信息由下面四个值组成: 
 //

@@ -46,7 +46,7 @@ namespace Demo_DateTime
         private void button1_Click(object sender, EventArgs e)
         {
             this.textBox1.Text = this.dateTimePicker1.Value.ToString();
-            this.textBox1.Text = this.dateTimePicker1.Text;
+            //this.textBox1.Text = this.dateTimePicker1.Text;
         }
     }
 }
