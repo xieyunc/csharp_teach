@@ -12,44 +12,69 @@ namespace Demo_MDIForm
 {
     public partial class Form1 : Form
     {
+        private Form2 aForm;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void mi_Exit_Click(object sender, EventArgs e)
+        private void mi_File_Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void mi_NewWindow_Click(object sender, EventArgs e)
+        private void mi_File_OpenForm2_Click(object sender, EventArgs e)
         {
-            Form aForm = new Form();
-            aForm.Text = string.Format("Mdi Window {0}",this.MdiChildren.Count()+1);
-            aForm.Width = 450;
+            if (aForm==null)
+                aForm = new Form2();
             aForm.MdiParent = this;
             aForm.Show();
         }
 
-        private void mi_CloseWindow_Click(object sender, EventArgs e)
+        private void mi_File_CloseForm2_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Close();
+            aForm.Close();
+            aForm = null;
         }
 
-        private void mi_Fill_Horizontal_Click(object sender, EventArgs e)
+        private void mi_Win_NewForm_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(MdiLayout.TileHorizontal);
+            Form aForm = new Form();
+            aForm.MdiParent = this;
+            aForm.Width = 450;
+            aForm.Text = string.Format("新窗口 {0}",this.MdiChildren.Count());
+            aForm.Show();
         }
 
-        private void mi_Fill_Vertcal_Click(object sender, EventArgs e)
+        private void mi_Win_CloseForm_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(MdiLayout.TileVertical);
+            if (this.ActiveMdiChild != null)
+                this.ActiveMdiChild.Close();//关闭当前活动的窗口
         }
 
-        private void mi_CascadeWindow_Click(object sender, EventArgs e)
+        private void mi_Win_DropDownOpened(object sender, EventArgs e)
         {
-            this.LayoutMdi(MdiLayout.Cascade);
+            mi_Win_CloseForm.Enabled = (this.ActiveMdiChild != null);
         }
 
+        private void mi_Win_Title_H_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);//窗口水平分割排列
+        }
+
+        private void mi_Win_Title_V_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);//窗口垂直分割排列
+        }
+
+        private void mi_Win_Cas_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);//窗口层叠排列
+        }
+
+        private void mi_Help_About_Click(object sender, EventArgs e)
+        {
+            (new AboutForm()).ShowDialog();
+        }
     }
 }
