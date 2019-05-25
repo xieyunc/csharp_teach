@@ -74,5 +74,24 @@ namespace Demo_Tree
         {
             treeView1.ExpandAll();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                treeView1.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(treeView1_DrawNode);
+                treeView1.DrawMode = TreeViewDrawMode.OwnerDrawText;
+            }
+            else
+            {
+                treeView1.DrawMode = TreeViewDrawMode.Normal;
+            }
+        }
+
+        private void treeView1_DrawNode(object sender, DrawTreeNodeEventArgs e)
+        {
+            e.DrawDefault = true;
+            return;
+        }
     }
 }

@@ -51,15 +51,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // treeView1
             // 
-            this.treeView1.AllowDrop = true;
-            this.treeView1.FullRowSelect = true;
             this.treeView1.HideSelection = false;
             this.treeView1.HotTracking = true;
-            this.treeView1.ItemHeight = 18;
+            this.treeView1.ItemHeight = 14;
             this.treeView1.Location = new System.Drawing.Point(12, 44);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "节点2";
@@ -148,11 +147,23 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(229, 248);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(204, 16);
+            this.checkBox1.TabIndex = 9;
+            this.checkBox1.Text = "TreeView失去焦点后仍然高亮显示";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 289);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -183,6 +194,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
