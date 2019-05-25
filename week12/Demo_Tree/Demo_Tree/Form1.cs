@@ -19,7 +19,7 @@ namespace Demo_Tree
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            textBox1.Text = treeView1.SelectedNode.Text+"("+treeView1.SelectedNode.Level.ToString()+")";
+            textBox1.Text = treeView1.SelectedNode.Text+"(级别:"+(treeView1.SelectedNode.Level+1).ToString()+")";
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -36,16 +36,19 @@ namespace Demo_Tree
         {
             if (textBox2.Text != "")
             {
-                TreeNode tn;
+                TreeNode tn,tn1;
                 if (treeView1.SelectedNode != null)
                 {
                     tn = treeView1.SelectedNode;
-                    tn.Nodes.Add(textBox2.Text);
+                    tn1 = tn.Nodes.Add(textBox2.Text);
                 }
                 else
                 {
                     tn = treeView1.Nodes.Add(textBox2.Text);
+                    tn1 = tn;
                 }
+                tn.Expand();//展开tn节点
+                treeView1.SelectedNode = tn1;//把新增节点设置为当前选中的节点
             }
             else
             {

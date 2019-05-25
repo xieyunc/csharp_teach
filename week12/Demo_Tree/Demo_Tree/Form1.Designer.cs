@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("南昌");
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("九江");
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("赣州");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("江西", new System.Windows.Forms.TreeNode[] {
-            treeNode49,
-            treeNode50,
-            treeNode51});
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("长沙");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("湘谭");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("湖南", new System.Windows.Forms.TreeNode[] {
-            treeNode53,
-            treeNode54});
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("中国", new System.Windows.Forms.TreeNode[] {
-            treeNode52,
-            treeNode55});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("南昌");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("九江");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("赣州");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("江西", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("长沙");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("湘谭");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("湖南", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("中国", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode7});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,26 +59,27 @@
             this.treeView1.FullRowSelect = true;
             this.treeView1.HideSelection = false;
             this.treeView1.HotTracking = true;
+            this.treeView1.ItemHeight = 18;
             this.treeView1.Location = new System.Drawing.Point(12, 44);
             this.treeView1.Name = "treeView1";
-            treeNode49.Name = "节点2";
-            treeNode49.Text = "南昌";
-            treeNode50.Name = "节点3";
-            treeNode50.Text = "九江";
-            treeNode51.Name = "节点4";
-            treeNode51.Text = "赣州";
-            treeNode52.Name = "节点1";
-            treeNode52.Text = "江西";
-            treeNode53.Name = "节点6";
-            treeNode53.Text = "长沙";
-            treeNode54.Name = "节点7";
-            treeNode54.Text = "湘谭";
-            treeNode55.Name = "节点5";
-            treeNode55.Text = "湖南";
-            treeNode56.Name = "节点0";
-            treeNode56.Text = "中国";
+            treeNode1.Name = "节点2";
+            treeNode1.Text = "南昌";
+            treeNode2.Name = "节点3";
+            treeNode2.Text = "九江";
+            treeNode3.Name = "节点4";
+            treeNode3.Text = "赣州";
+            treeNode4.Name = "节点1";
+            treeNode4.Text = "江西";
+            treeNode5.Name = "节点6";
+            treeNode5.Text = "长沙";
+            treeNode6.Name = "节点7";
+            treeNode6.Text = "湘谭";
+            treeNode7.Name = "节点5";
+            treeNode7.Text = "湖南";
+            treeNode8.Name = "节点0";
+            treeNode8.Text = "中国";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode56});
+            treeNode8});
             this.treeView1.Size = new System.Drawing.Size(183, 223);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
